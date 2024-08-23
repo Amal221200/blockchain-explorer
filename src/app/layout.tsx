@@ -1,6 +1,12 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import { headers } from "next/headers";
+import { cookieToInitialState } from "wagmi";
+import { getConfig } from "@/blockchain/config";
+import BlockchainProviders from "@/blockchain/BlockchainProviders";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,9 +20,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const cookie = headers().get('cookie');
+  const initialState = cookieToInitialState(getConfig(), cookie)
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <BlockchainProviders initialState={initialState}>
+          <Header />
+          {children}
+          <Footer />
+        </BlockchainProviders>
+      </body>
     </html>
   );
 }
