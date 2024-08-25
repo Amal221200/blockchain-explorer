@@ -63,7 +63,16 @@
   * {
     @apply border-border;
   }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-zinc-200 text-foreground;
   }
+}
+
+.address-link {
+  @apply font-medium transition-colors;
+}
+
+.address-link:hover {
+  @apply text-blue-600;
 }
