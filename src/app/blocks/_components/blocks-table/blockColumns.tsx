@@ -16,11 +16,11 @@ import { toast } from "sonner"
 
 export const blockColumns: ColumnDef<Block>[] = [
   {
-    accessorKey: "blockNumber",
+    accessorKey: "block",
     header: "Block",
     cell: ({ row }) => (
-      <Link href={`/blocks/${row.getValue('blockNumber')}`} className="address-link font-medium">
-        {row.getValue('blockNumber')}
+      <Link href={`/blocks/${row.getValue('block')}`} className="address-link font-medium">
+        {row.getValue('block')}
       </Link>
     )
   },
@@ -46,7 +46,7 @@ export const blockColumns: ColumnDef<Block>[] = [
     accessorKey: "transactions",
     header: "Txn",
     cell: ({ row }) => (
-      <Link href={`/blocks/${row.getValue('blockNumber')}`} className="text-blue-600">
+      <Link href={`/blocks/${row.getValue('block')}`} className="text-blue-600">
         {row.getValue('transactions')}
       </Link>
     )
@@ -55,7 +55,7 @@ export const blockColumns: ColumnDef<Block>[] = [
     accessorKey: "feeRecipient",
     header: "Fee Recipient",
     cell: ({ row }) => (
-      <Link href={`/accounts/${row.getValue('feeRecipient')}`}>
+      <Link href={`#`}>
         {stringShortner(row.getValue('feeRecipient'), 10)}
       </Link>
     )
@@ -73,7 +73,7 @@ export const blockColumns: ColumnDef<Block>[] = [
     accessorKey: "gasLimit",
     header: "Gas Limit",
     cell: ({ row }) => (
-      <Link href={`/blocks/${row.getValue('blockNumber')}`}>
+      <Link href={`/blocks/${row.getValue('block')}`}>
         {row.getValue('gasLimit')}
       </Link>
     )
@@ -82,7 +82,7 @@ export const blockColumns: ColumnDef<Block>[] = [
     accessorKey: "baseFee",
     header: "Base Fee",
     cell: ({ row }) => (
-      <Link href={`/blocks/${row.getValue('blockNumber')}`}>
+      <Link href={`/blocks/${row.getValue('block')}`}>
         {row.getValue('baseFee')}
       </Link>
     )
@@ -123,7 +123,7 @@ export const blockColumns: ColumnDef<Block>[] = [
             <DropdownMenuLabel>Actions</DropdownMenuLabel>
             <DropdownMenuItem
               onClick={async() => {
-                await navigator.clipboard.writeText(block.blockNumber.toString())
+                await navigator.clipboard.writeText(block.block.toString())
                 toast.success("Copied")
               }}
             >

@@ -22,25 +22,25 @@ const BlocksTable = () => {
             </TableHeader>
             <TableBody>
                 {blocksData.map((transaction) => (
-                    <TableRow key={transaction.blockNumber} className="">
+                    <TableRow key={transaction.block} className="">
                         <TableCell className="">
                             <div className="flex gap-x-1">
                                 <BoxIcon size={35} />
                                 <div>
-                                    <Link className="address-link" href={`/blocks/${transaction.blockNumber}`}>{transaction.blockNumber}</Link>
+                                    <Link className="address-link" href={`/blocks/${transaction.block}`}>{transaction.block}</Link>
                                     <p className="text-[0.75rem] font-light">{relativeTimeInSeconds(new Date(transaction.age))}</p>
                                 </div>
                             </div>
                         </TableCell>
                         <TableCell>
-                            <p>Fee Recipient <Link href={`/accounts/${transaction.feeRecipient}`} className="address-link">{stringShortner(transaction.feeRecipient, 10)}</Link></p>
+                            <p>Fee Recipient <Link href={`#`} className="address-link">{stringShortner(transaction.feeRecipient, 10)}</Link></p>
                             <p>
                                 <span className="font-medium">{transaction.transactions}</span> txns in 12 secs
                             </p>
                         </TableCell>
                         <TableCell>
                             <span className="rounded border-2 border-black px-1 py-0.5 text-[0.65rem]">
-                                {transaction.reward.toFixed(4)} ETH
+                                {transaction.reward} ETH
                             </span>
                         </TableCell>
                     </TableRow>

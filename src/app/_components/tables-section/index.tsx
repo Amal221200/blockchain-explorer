@@ -1,7 +1,6 @@
 import BlocksTable from "./BlocksTable"
 import TransactionsTable from "./TransactionsTable"
 
-
 const TablesSection = () => {
   return (
     <section className="p-3">

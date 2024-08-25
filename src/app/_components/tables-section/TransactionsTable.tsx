@@ -34,12 +34,12 @@ const TransactionsTable = () => {
                             </div>
                         </TableCell>
                         <TableCell>
-                            <p>From: <Link href={`/accounts/${transaction.from}`} className="address-link">{stringShortner(transaction.from, 10)}</Link></p>
-                            <p>To: <Link href={`/accounts/${transaction.to}`} className="address-link">{stringShortner(transaction.to, 10)}</Link></p>
+                            <p>From: <Link href={`#`} className="address-link">{stringShortner(transaction.from, 10)}</Link></p>
+                            <p>To: <Link href={`#`} className="address-link">{stringShortner(transaction.to, 10)}</Link></p>
                         </TableCell>
                         <TableCell>
                             <span className="rounded border-2 border-black px-1 py-0.5 text-[0.65rem]">
-                            {transaction.amount.toFixed(4)} ETH
+                            {transaction.amount} ETH
                             </span>
                         </TableCell>
                     </TableRow>
