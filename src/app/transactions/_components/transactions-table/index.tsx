@@ -1,5 +1,5 @@
 "use client"
-import { transactionColumns } from "./transactionColumns"
+import { transactionColumns } from "./transactionColumn"
 import useDataTable from "@/hooks/useDataTable"
 import DataTable from "@/components/DataTable"
 import { transactionsData } from "@/lib/data"
