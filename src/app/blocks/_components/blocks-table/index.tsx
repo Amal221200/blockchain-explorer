@@ -8,6 +8,6 @@ export default function BlocksTable() {
   const { table, columnFilters, columnVisibility, pagination, sorting } = useDataTable(blocksData, blockColumns)
 
   return (
-    <DataTable table={table} columns={blockColumns} filterColumn="blockNumber" label="blocks" pagination={pagination} />
+    <DataTable table={table} columns={blockColumns} filterColumn="block" label="blocks" pagination={pagination} />
   )
 }
