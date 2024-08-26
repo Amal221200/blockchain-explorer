@@ -39,7 +39,7 @@ const TransactionsTable = () => {
                         </TableCell>
                         <TableCell>
                             <span className="rounded border-2 border-black px-1 py-0.5 text-[0.65rem]">
-                            {transaction.amount} ETH
+                            {transaction.amount}&nbsp;ETH
                             </span>
                         </TableCell>
                     </TableRow>

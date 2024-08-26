@@ -22,10 +22,10 @@ const TransactionPage = () => {
             <strong className="font-normal text-zinc-600">Time Stamp:</strong> <p className="col-span-2">{relativeTimeInSeconds(new Date(tx.age))} {(new Date(tx.age)).toUTCString()}</p>
             <Separator className='col-span-full my-2 bg-zinc-300' />
             <strong className="font-normal text-zinc-600">Transaction Action:</strong> 
-            <p className="col-span-2">Transfer {tx.amount} ETH by <Link href={`/accounts/${tx.from}`} className="address-link">{stringShortner(tx.from, 9)}</Link> to <Link href={`/accounts/${tx.to}`} className="address-link">{stringShortner(tx.to, 9)}</Link></p>
+            <p className="col-span-2">Transfer {tx.amount} ETH by <Link href={`#`} className="address-link">{stringShortner(tx.from, 9)}</Link> to <Link href={`#`} className="address-link">{stringShortner(tx.to, 9)}</Link></p>
             <Separator className='col-span-full my-2 bg-zinc-300' />
-            <strong className="font-normal text-zinc-600">From:</strong> <Link href={`/accounts/${tx.from}`} className="address-link col-span-2">{tx.from}</Link>
-            <strong className="font-normal text-zinc-600">To:</strong> <Link href={`/accounts/${tx.to}`} className="address-link col-span-2">{tx.to}</Link>
+            <strong className="font-normal text-zinc-600">From:</strong> <Link href={`#`} className="address-link col-span-2">{tx.from}</Link>
+            <strong className="font-normal text-zinc-600">To:</strong> <Link href={`#`} className="address-link col-span-2">{tx.to}</Link>
             <Separator className='col-span-full my-2 bg-zinc-300' />
             <strong className="font-normal text-zinc-600">Value:</strong> <p className="col-span-2">{tx.amount} ETH</p>
             <strong className="font-normal text-zinc-600">Transaction Fee:</strong> <p className="col-span-2">{tx.transactionFee} ETH</p>

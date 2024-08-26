@@ -34,7 +34,7 @@ const MainInput = () => {
     }, [router])
 
     return (
-        <form onSubmit={handleSubmit} className="flex gap-x-2 rounded-md bg-white text-black">
+        <form onSubmit={handleSubmit} className="flex w-full gap-x-2 rounded-md bg-white text-black">
             <SelectInput values={selectInputData} name="type" defaultValue="tx hash" />
             <Input name="value" placeholder="Search by address / transaction hash / block number" className="max-w-5xl" />
             <div>

@@ -13,7 +13,7 @@ const LAST_SAFE_BLOCK = "20598129"
 const Main = () => {
   return (
     <main className="relative mb-[18rem] flex h-[30vh] items-center justify-stretch bg-zinc-900 bg-main md:mb-[8rem]">
-      <div className="ml-7 max-w-7xl p-4 text-white">
+      <div className="w-full max-w-5xl p-4 text-white md:ml-7">
         <h1 className="text-xl font-bold">Ethereum Blockchain Explorer</h1>
         <MainInput />
       </div>

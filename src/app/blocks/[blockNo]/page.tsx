@@ -19,7 +19,7 @@ const BlockPage = () => {
             <strong className="font-normal text-zinc-600">Time Stamp:</strong> <p className="col-span-2">{relativeTimeInSeconds(new Date(blockData.age))} {(new Date(blockData.age)).toUTCString()}</p>
 
             <strong className="font-normal text-zinc-600">Proposed On:</strong>
-            <p className="col-span-2">Block proposed on <Link href={`/accounts/${blockData.slot}`} className="address-link">{blockData.slot}</Link>, epoch <Link href={`/accounts/${blockData.epoch}`} className="address-link">{blockData.epoch}</Link></p>
+            <p className="col-span-2">Block proposed on <Link href={`#`} className="address-link">{blockData.slot}</Link>, epoch <Link href={`#`} className="address-link">{blockData.epoch}</Link></p>
 
             <strong className="font-normal text-zinc-600">Transactions:</strong>
             <p className="col-span-2">{blockData.transactions} transactions and {blockData.internalTransactions} contract internal transactions in this block.</p>
