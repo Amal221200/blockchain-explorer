@@ -29,7 +29,7 @@ export const transactionColumns: ColumnDef<Transaction>[] = [
     accessorKey: "method",
     header: "Method",
     cell: ({ row }) => (
-      <p>
+      <p className="rounded border border-black text-center text-[0.69rem] font-medium">
         {row.getValue('method')}
       </p>
     )

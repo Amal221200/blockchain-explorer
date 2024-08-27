@@ -3,7 +3,7 @@ import { Block, Transaction } from "./types"
 export const transactionsData: Array<Transaction> = [
     {
         hash: "0xe3ddd30c5f06d7921e050c24a83cec1470821868c7b930e782915e301846a775",
-        status: "Success",
+        status: "success",
         from: "0x95222290DD7278Aa3Ddd389Cc1E1d165CC4BAfe5",
         to: "0x4313C378Cc91eA583C91387B9216e2c03096b27f",
         amount: 0.1234,
@@ -15,7 +15,7 @@ export const transactionsData: Array<Transaction> = [
     },
     {
         hash: "0xe3ddd30c5f06d7921e050c24a83cec1470821868c7b930e782915e301846a775",
-        status: "Success",
+        status: "success",
         from: "0x95222290DD7278Aa3Ddd389Cc1E1d165CC4BAfe5",
         to: "0x4313C378Cc91eA583C91387B9216e2c03096b27f",
         amount: 0.1234,
@@ -27,7 +27,7 @@ export const transactionsData: Array<Transaction> = [
     },
     {
         hash: "0xe3ddd30c5f06d7921e050c24a83cec1470821868c7b930e782915e301846a775",
-        status: "Success",
+        status: "success",
         from: "0x95222290DD7278Aa3Ddd389Cc1E1d165CC4BAfe5",
         to: "0x4313C378Cc91eA583C91387B9216e2c03096b27f",
         amount: 0.1234,
@@ -39,7 +39,7 @@ export const transactionsData: Array<Transaction> = [
     },
     {
         hash: "0xe3ddd30c5f06d7921e050c24a83cec1470821868c7b930e782915e301846a775",
-        status: "Success",
+        status: "success",
         from: "0x95222290DD7278Aa3Ddd389Cc1E1d165CC4BAfe5",
         to: "0x4313C378Cc91eA583C91387B9216e2c03096b27f",
         amount: 0.1234,
@@ -51,7 +51,7 @@ export const transactionsData: Array<Transaction> = [
     },
     {
         hash: "0xe3ddd30c5f06d7921e050c24a83cec1470821868c7b930e782915e301846a775",
-        status: "Success",
+        status: "success",
         from: "0x95222290DD7278Aa3Ddd389Cc1E1d165CC4BAfe5",
         to: "0x4313C378Cc91eA583C91387B9216e2c03096b27f",
         amount: 0.1234,
@@ -63,7 +63,7 @@ export const transactionsData: Array<Transaction> = [
     },
     {
         hash: "0xe3ddd30c5f06d7921e050c24a83cec1470821868c7b930e782915e301846a775",
-        status: "Success",
+        status: "success",
         from: "0x95222290DD7278Aa3Ddd389Cc1E1d165CC4BAfe5",
         to: "0x4313C378Cc91eA583C91387B9216e2c03096b27f",
         amount: 0.1234,

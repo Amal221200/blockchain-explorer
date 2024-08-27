@@ -1,3 +1,4 @@
+import TransactionStatus from "@/components/TransactionStatus"
 import { Separator } from "@/components/ui/separator"
 import { transactionsData } from "@/lib/data"
 import { relativeTimeInSeconds, stringShortner } from "@/lib/utils"
@@ -17,7 +18,7 @@ const TransactionPage = () => {
         <div className='mx-auto max-w-7xl overflow-x-auto rounded-md bg-white p-3'>
           <div className="grid grid-cols-3 gap-y-3 text-sm">
             <strong className="font-normal text-zinc-600">Transaction Hash:</strong> <p className="col-span-2">{tx.hash}</p>
-            <strong className="font-normal text-zinc-600">Status:</strong> <p className="col-span-2">{tx.status}</p>
+            <strong className="font-normal text-zinc-600">Status:</strong> <p className="col-span-2"><TransactionStatus status={tx.status} /></p>
             <strong className="font-normal text-zinc-600">Block :</strong> <p className="col-span-2">{tx.block}</p>
             <strong className="font-normal text-zinc-600">Time Stamp:</strong> <p className="col-span-2">{relativeTimeInSeconds(new Date(tx.age))} {(new Date(tx.age)).toUTCString()}</p>
             <Separator className='col-span-full my-2 bg-zinc-300' />
